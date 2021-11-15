@@ -14,7 +14,7 @@ public class WorkScript : MonoBehaviour
   int[] divNum = new int[n];
   List<int> numbers = new List<int>();
 
-  for (int i = 1; i < divNum.Length; i++)
+  for (int i=1; i < divNum.Length; i++)
   {
    divNum[i] = i;
    if (i%2 == 0)
@@ -22,6 +22,11 @@ public class WorkScript : MonoBehaviour
     numbers.Add(divNum[i]);
    }
   }
+  if (n % 2 == 0)
+  {
+   numbers.Add(n);
+  }
+
   text.text = string.Join(" ", numbers.ToArray());
  }
  /*
